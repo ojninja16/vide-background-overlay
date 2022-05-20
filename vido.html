@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="abc.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="3.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="overlay">
+      <h1><strong> Scenic Nature</strong></h1>
+      <p id="ovl">
+        <strong>
+          Look deep into nature, and then you will understand everything
+          better.</strong
+        >
+        <br />
+        <code> -Albert Einstein</code>
+      </p>
+      <button id="myBtn" onclick="myFunction()">Pause the Video</button>
+    </div>
+
+    <script>
+      var video = document.getElementById("myVideo");
+      var btn = document.getElementById("myBtn");
+
+      function myFunction() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = "Pause the Video";
+        } else {
+          video.pause();
+          btn.innerHTML = "Play the Video";
+        }
+      }
+    </script>
+  </body>
+</html>
